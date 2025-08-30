@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+<link rel="stylesheet" href="/layout.css">
+<script src="/event.js" type = "module" defer></script>
+    <head>
+        <meta charset = "UTF-8"/>
+        <title> Online shopping </title>
+    </head>
+    <body>
+        <div id = "container">
+            <header class="header">
+                <h1 id = "welcomeTag"> Welcome <%= person.name %>! </h1>
+            </header>
+            <aside class="aside">
+                <div class="board">
+                    <h2> NoticeBoard </h2>
+                    <div id = "notices">
+                    </div>
+                </div>
+            </aside>
+            <main class="maincontent">
+                <div class="flex-container">
+                    <div class="list">
+                        <h2> Solo List </h2>
+                        <div id = "Solo">
+                        </div>
+                    </div> 
+                    <div id = "Group" class="list">
+                        <h2> Group List </h2>
+                    </div>
+                    <div class="section">
+                        <div class="text">
+                            <h2>Add an item to the list</h2>
+                            <form id = "Itemform" method="POST" action="/addItem">
+                                <label for="AddItem"> Name of item to add to list</label><br>
+                                <input type="text" id="AddItem" name="AddItem"><br>
+                                <label for="isSolo"> Tick this box if you do not want this included in the group shop</label>
+                                <input type="checkbox" class = "button" id="isSolo" name="AddItem"><br>
+                                <button class="button" type="submit" id = "submitButton">Submit</button>
+                            </form>
+                        </div> 
+                        <form id="notifyChoice" method="POST" action="/notify">
+                            <h3>Notify when back in stock </h3>
+                            <label for="notify">Choose item to notify:</label><br>
+                            <select class="dropdown" id = "choice" name = "notify" required>
+                            </select>
+                            <input class= "button" type = "submit" value = "Submit Choice">
+                            
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

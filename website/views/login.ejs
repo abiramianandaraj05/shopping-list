@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8"/>
+        <link rel="stylesheet" href="/layout.css">
+            <title> Login </title>
+    </head>
+    <body class="center">
+        <header class="header">  
+        </header>
+        <main>
+            <div class="box">
+                <h1> LOGIN </h1>
+                <form method="POST" action="/login">
+                    <div class="form-entry">
+                    <label for = "name">Enter your username: </label><br>
+                    <input type = "text" id ="name" name="name"><br>
+                    </div>
+                    <div class="form-entry">
+                    <label for = "password" >Enter your password: </label><br>
+                    <input type = "text" id ="password" name = "password"><br>
+                    </div>
+                    <button type="submit" id = "loginSubmit">Submit</button>
+                    <label id = "output"></label>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
